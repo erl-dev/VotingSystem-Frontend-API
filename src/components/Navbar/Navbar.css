@@ -25,6 +25,13 @@
 .nav-register{
     cursor: pointer;
 }
+.nav-register-link{
+    color: white; 
+    text-decoration: none; 
+}
+.nav-register-link:hover{
+    color: whitesmoke;
+}
 .nav-contact{
     border-radius: 50px;
     padding: 10px 38px;

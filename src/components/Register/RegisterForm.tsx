@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios, { AxiosError } from "axios";
 import "./RegisterForm.css";
+import Navbar from "../Navbar/Navbar";
 
 interface RegistrationData {
   firstName: string;
@@ -46,44 +47,47 @@ const RegisterForm: React.FC = () => {
   };
 
   return (
-    <div className="register-form-container">
-      {" "}
-      {/* Apply a class for styling */}
-      <form onSubmit={handleSubmit} className="register-form">
-        <input
-          type="text"
-          name="firstName"
-          placeholder="First Name"
-          value={formData.firstName}
-          onChange={handleChange}
-          required
-        />
-        <input
-          type="text"
-          name="lastName"
-          placeholder="Last Name"
-          value={formData.lastName}
-          onChange={handleChange}
-          required
-        />
-        <input
-          type="email"
-          name="email"
-          placeholder="Email"
-          value={formData.email}
-          onChange={handleChange}
-          required
-        />
-        <input
-          type="password"
-          name="password"
-          placeholder="Password"
-          value={formData.password}
-          onChange={handleChange}
-          required
-        />
-        <button type="submit">Register</button>
-      </form>
+    <div>
+      <Navbar />
+      <div className="register-form-container">
+        {" "}
+        {/* Apply a class for styling */}
+        <form onSubmit={handleSubmit} className="register-form">
+          <input
+            type="text"
+            name="firstName"
+            placeholder="First Name"
+            value={formData.firstName}
+            onChange={handleChange}
+            required
+          />
+          <input
+            type="text"
+            name="lastName"
+            placeholder="Last Name"
+            value={formData.lastName}
+            onChange={handleChange}
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            value={formData.password}
+            onChange={handleChange}
+            required
+          />
+          <button type="submit">Register</button>
+        </form>
+      </div>
     </div>
   );
 };
